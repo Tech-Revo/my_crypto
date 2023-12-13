@@ -75,29 +75,25 @@
                         <div class="menu">
                             <ul class="clearfix">
                                 <li class="active"><a href="{{url('/')}}">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="services.html">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
                                 <li>
                                     <a href="#">Pages</a>
                                     <ul>
-                                        <li><a href="team.html">- Team</a></li>
-                                        <li><a href="wallets.html">- Wallets</a></li>
-                                        <li><a href="overview.html">- Overview</a></li>
-                                        <li><a href="benefits.html">- Benefits</a></li>
-                                        <li><a href="digital-asset-exchanges.html">- Digital Asset Exchanges</a></li>
-                                        <li><a href="testimonials.html">- Testimonials</a></li>
-                                        <li><a href="market_data.html">- Crypto Market</a></li>
+                                        <li><a href="#">- Team</a></li>
+                                        <li><a href="#">- Wallets</a></li>
+                                        <li><a href="#">- Overview</a></li>
+                                        
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="blog.html">Blog</a>
                                     <ul>
-                                        <li><a href="blog_list.html">- Blog list</a></li>
-                                        <li><a href="blog_grid.html">- Blog grid</a></li>
-                                        <li><a href="blog_detail.html">- Blog details</a></li>
+                                        <li><a href="#">- Blog list</a></li>
+                                       
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </div>
                         <div class="search_bar">
