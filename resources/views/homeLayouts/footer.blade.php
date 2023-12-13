@@ -5,7 +5,7 @@
                <div class="col-md-4">
                   <div class="full">
                      <div class="footer_logo">
-                        <img class="img-responsive" src="{{url('assets/img/logo.png')}}" alt="#" width="100px;">
+                        <img class="img-responsive" src="{{url('assets/img/logo_transparent.png')}}" alt="#" width="100px;">
                      </div>
                   </div>
                   <div class="full">

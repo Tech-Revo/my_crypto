@@ -35,7 +35,7 @@
                 <div class="col-md-3 left_logo_design">
                     <div class="full">
                         <div class="logo">
-                            <a href="index.html"><img class="img-responsive" src="{{ url('assets/img/logo.png') }}"
+                            <a href="index.html"><img class="img-responsive" src="{{ url('assets/img/logo_transparent.png') }}"
                                     alt="#" style="width: 40%" /></a>
                         </div>
                     </div>

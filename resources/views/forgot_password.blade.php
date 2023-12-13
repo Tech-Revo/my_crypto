@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/icon.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/fav.png') }}">
     <title>My Crypto</title>
     <link rel="stylesheet" type="text/css" href="{{ url('assets/css/adminbootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('assets/css/font-awesome.min.css') }}">
@@ -19,8 +19,9 @@
                 <div class="account-box">
                     <form class="form-signin" action="#">
                         <div class="account-logo">
-                            <a href="index-2.html"><img src="{{url('assets/img/logo.png')}}" alt=""></a>
+                            <a href="index-2.html"><img src="{{url('assets/img/logo_transparent.png')}}" alt=""></a>
                         </div>
+                        <br>
                         <div class="form-group">
                             <label>Enter Your Email</label>
                             <input type="text" class="form-control" autofocus>
