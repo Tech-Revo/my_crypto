@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\IndexController;
@@ -31,3 +32,5 @@ Route::group(['prefix'=>'admin/settings'],function(){
     Route::get('/change-password', [PasswordController::class, 'index']);
     
 });
+
+Route::get('admin/chat',[ChatController::class,'index']);

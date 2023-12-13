@@ -21,7 +21,7 @@
 
 
                  <li>
-                     <a href="chat.html"><i class="fa fa-comments"></i> <span>Chat</span> <span
+                     <a href="{{url('admin/chat')}}"><i class="fa fa-comments"></i> <span>Chat</span> <span
                              class="badge badge-pill bg-primary float-right">5</span></a>
                  </li>
                  <li class="submenu">
