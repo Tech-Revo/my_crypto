@@ -34,7 +34,7 @@
                      </ul>
                  </li>
             
-                 <li class="{{request()->is('admin/settings')?'active':null}}">
+                 <li class="{{request()->is('admin/settings*')?'active':null}}">
                      <a href="{{url('admin/settings')}}"><i class="fa fa-cog"></i> <span>Settings</span></a>
                  </li>
                

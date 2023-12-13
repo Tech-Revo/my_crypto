@@ -31,7 +31,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Privacy Settings</h4>
                                 <p class="card-text">Configure your personal password.</p>
-                                <a href="#" class="card-link">Change Password</a>
+                                <a href="{{url('admin/settings/change-password')}}" class="card-link">Change Password</a>
                             </div>
                         </div>
 

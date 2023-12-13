@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,5 +28,6 @@ Route::get('admin/dashboard',[DashboardController::class,'index']);
 
 Route::group(['prefix'=>'admin/settings'],function(){
     Route::get('/',[SettingController::class,'index']);
+    Route::get('/change-password', [PasswordController::class, 'index']);
     
 });
