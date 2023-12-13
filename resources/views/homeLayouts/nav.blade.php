@@ -74,7 +74,7 @@
                     <div class="main_menu float-left">
                         <div class="menu">
                             <ul class="clearfix">
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="active"><a href="{{url('/')}}">Home</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="services.html">Services</a></li>
                                 <li>

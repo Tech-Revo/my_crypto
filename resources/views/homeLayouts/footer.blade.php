@@ -5,7 +5,7 @@
                <div class="col-md-4">
                   <div class="full">
                      <div class="footer_logo">
-                        <img class="img-responsive" src="img/logo.png" alt="#" width="250">
+                        <img class="img-responsive" src="{{url('assets/img/logo.png')}}" alt="#" width="100px;">
                      </div>
                   </div>
                   <div class="full">
@@ -29,10 +29,10 @@
                         </div>
                         <div class="full">
                            <ul class="footer_links">
-                              <li><a href="coins.html">Our Coin</a></li>
-                              <li><a href="about.html">About</a></li>
-                              <li><a href="team.html">Our Team</a></li>
-                              <li><a href="services.html">Our Projects</a></li>
+                              <li><a href="#">Our Coin</a></li>
+                              <li><a href="#">About</a></li>
+                              <li><a href="#">Our Team</a></li>
+                              <li><a href="#">Our Projects</a></li>
                            </ul>
                         </div>
                      </div>
@@ -42,10 +42,10 @@
                         </div>
                         <div class="full">
                            <ul class="footer_links">
-                              <li><a href="market_data.html">How to Buy Coin</a></li>
-                              <li><a href="market_data.html">Coin Overview</a></li>
-                              <li><a href="blog.html">Blog News</a></li>
-                              <li><a href="market_data.html">How to Sell Coin</a></li>
+                              <li><a href="#">How to Buy Coin</a></li>
+                              <li><a href="#">Coin Overview</a></li>
+                              <li><a href="#">Blog News</a></li>
+                              <li><a href="#">How to Sell Coin</a></li>
                            </ul>
                         </div>
                      </div>
@@ -55,10 +55,10 @@
                         </div>
                         <div class="full">
                            <ul class="footer_links">
-                              <li><a href="market_data.html">How to Buy Coin</a></li>
-                              <li><a href="market_data.html">Coin Overview</a></li>
-                              <li><a href="blog.html">Blog News</a></li>
-                              <li><a href="market_data.html">How to Sell Coin</a></li>
+                              <li><a href="#">How to Buy Coin</a></li>
+                              <li><a href="#">Coin Overview</a></li>
+                              <li><a href="#">Blog News</a></li>
+                              <li><a href="#">How to Sell Coin</a></li>
                            </ul>
                         </div>
                      </div>
@@ -84,5 +84,4 @@
       <script src="{{url('assets/js/indexbootstrap.min.js')}}"></script>
       <script src="{{url('assets/js/wow.js')}}"></script>
       <script src="{{url('assets/js/embed.min.js')}}"></script>
-      <script src="{{url('assets/js/coinponent.js')}}"></script>
       <script src="{{url('assets/js/custom.js')}}"></script>

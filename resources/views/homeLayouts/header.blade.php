@@ -7,9 +7,8 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
-      <link rel="icon" href="img/fevicon.png" type="image/png" />
+      <link rel="shortcut icon" type="image/x-icon" href="{{url('assets/img/icon.ico')}}">
       <link rel="stylesheet" href="{{url('assets/css/indexbootstrap.min.css')}}" />
       <link rel="stylesheet" href="{{url('assets/css/indexstyle.css')}}" />
       <link rel="stylesheet" href="{{url('assets/css/responsive.css')}}" />
-      <link rel="stylesheet" href="css/custom.css" />
       <link rel="stylesheet" href="{{url('assets/css/animate.css')}}" />
