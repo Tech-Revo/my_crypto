@@ -36,7 +36,7 @@
                     <div class="full">
                         <div class="logo">
                             <a href="index.html"><img class="img-responsive" src="{{ url('assets/img/logo.png') }}"
-                                    alt="#" style="width: 40%"/></a>
+                                    alt="#" style="width: 40%" /></a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                     <div class="main_menu float-left">
                         <div class="menu">
                             <ul class="clearfix">
-                                <li class="active"><a href="{{url('/')}}">Home</a></li>
+                                <li class="active"><a href="{{ url('/') }}">Home</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li>
@@ -83,29 +83,24 @@
                                         <li><a href="#">- Team</a></li>
                                         <li><a href="#">- Wallets</a></li>
                                         <li><a href="#">- Overview</a></li>
-                                        
+
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Blog</a>
+                                    <a href="#">Blog</a>
                                     <ul>
                                         <li><a href="#">- Blog list</a></li>
-                                       
+
                                     </ul>
                                 </li>
                                 <li><a href="#">Contact</a></li>
+
+                                <li><a href="#" class="btn-danger text-light px-2 justify-content-end">login</a></li>
+
                             </ul>
+
                         </div>
-                        <div class="search_bar">
-                            <div class="search-wrapper">
-                                <div class="input-holder">
-                                    <input type="text" class="search-input" placeholder="Type to search" />
-                                    <button class="search-icon" onclick="searchToggle(this, event);"><i
-                                            class="fa fa-search"></i></button>
-                                </div>
-                                <span class="close" onclick="searchToggle(this, event);"></span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>

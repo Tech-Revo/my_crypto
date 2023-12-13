@@ -868,7 +868,7 @@ section .small_head h2 {
 }
 
 #status {
-    background: url('../images/loading.gif');
+    background: url('../img/loading.gif');
     width: 220px;
     height: 220px;
     background-size: cover;
@@ -1125,7 +1125,6 @@ ul.top_menu li a:focus {
     padding: 21px 0;
     display: block;
     font-size: 18px;
-    font-weight: 700;
     letter-spacing: 0;
     color: #fff;
     text-transform: uppercase;
@@ -1149,7 +1148,6 @@ ul.top_menu li a:focus {
     box-sizing: border-box;
     box-shadow: 0 15px 40px -20px #000;
     padding: 0;
-    background-image: url('../images/landing_page/bg2.png');
     background-size: cover;
     background-position: right bottom;
     min-height: 420px;
@@ -2753,10 +2751,7 @@ ul.social_icon li i {
     right: 0;
 }
 
-.search_bar i {
-    font-size: 22px;
-    color: #111;
-}
+
 
 .running_stock {
     height: 65px;

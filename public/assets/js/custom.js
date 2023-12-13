@@ -104,53 +104,11 @@ var doScroll = function() {
 setInterval(doScroll, 20);
 contSpeed(controller.fullSpeed);
 
-/**== market widget ==**/
-(function(b, i, t, C, O, I, N) {
-  window.addEventListener('load', function() {
-    if (b.getElementById(C)) return;
-    I = b.createElement(i), N = b.getElementsByTagName(i)[0];
-    I.src = t;
-    I.id = C;
-    N.parentNode.insertBefore(I, N);
-  }, false)
-})(document, 'script', 'https://widgets.bitcoin.com/widget.js', 'btcwdgt');
 
 
-/**== search bar ==**/
-function searchToggle(obj, evt) {
-  var container = $(obj).closest('.search-wrapper');
-  if (!container.hasClass('active')) {
-    container.addClass('active');
-    evt.preventDefault();
-  } else if (container.hasClass('active') && $(obj).closest('.input-holder').length == 0) {
-    container.removeClass('active');
-    // clear input
-    container.find('.search-input').val('');
-  }
-}
 
-/**== graph section wallet ==**/
-new TradingView.widget({
-  "width": "100%",
-  "height": window.innerHeight,
-  "symbol": "COINBASE:BTCUSD",
-  "interval": "1",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "en",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_side_toolbar": false,
-  "allow_symbol_change": true,
-  "details": true,
-  "studies": [
-    "BB@tv-basicstudies",
-    "Volume@tv-basicstudies",
-    "VWAP@tv-basicstudies"
-  ],
-  "container_id": "tradingview_0b60e"
-});
+
+
 
 
 /**== testimonial slider js ==**/
