@@ -4,7 +4,7 @@
              <ul>
                  <li class="menu-title">Main</li>
                  <li class="{{request()->is('admin/dashboard')?'active':null}}">
-                     <a href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                     <a href="{{url('admin/dashboard')}}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                  </li>
                
 
@@ -34,8 +34,8 @@
                      </ul>
                  </li>
             
-                 <li>
-                     <a href="settings.html"><i class="fa fa-cog"></i> <span>Settings</span></a>
+                 <li class="{{request()->is('admin/settings')?'active':null}}">
+                     <a href="{{url('admin/settings')}}"><i class="fa fa-cog"></i> <span>Settings</span></a>
                  </li>
                
                 
