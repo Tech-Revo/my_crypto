@@ -95,7 +95,7 @@
                                 </li>
                                 <li><a href="#">Contact</a></li>
 
-                                <li><a href="#" class="btn-danger text-light px-2 justify-content-end">login</a></li>
+                                <li><a href="{{url('/login')}}" class="btn-danger text-light px-2 justify-content-end">login</a></li>
 
                             </ul>
 

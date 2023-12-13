@@ -34,6 +34,9 @@
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-primary account-btn">Login</button>
                         </div>
+                        <div class="text-center register-link">
+                            <a href="{{url('/')}}">Back to Home Page</a>
+                        </div>
                        
                     </form>
                 </div>
