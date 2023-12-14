@@ -45,9 +45,11 @@ class UserController extends Controller
                         'address' => $request->address,
                         'gender' => $request->gender,
                         'password'=>Hash::make($request->password),
+                        'status'=>'client'
 
                     ]
                 );
+                $user->assignRole(User::CLIENT);
                 $token = Str::random(60);
 
                 DB::table('password_resets')->insert([
