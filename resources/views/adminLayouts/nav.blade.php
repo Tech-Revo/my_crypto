@@ -27,7 +27,10 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="{{ url('admin/profile') }}">My Profile</a>
                 <a class="dropdown-item" href="{{ url('admin/profile/edit-profile') }}">Edit Profile</a>
-                <a class="dropdown-item" href="{{ url('admin/settings') }}">Settings</a>
+                 @if (auth()->user()->status == 'admin')
+                    <a class="dropdown-item" href="{{ url('admin/settings') }}">Settings</a>
+                @endif
+                
                 <a class="dropdown-item" href="{{ url('logout') }}">Logout</a>
             </div>
         </li>
@@ -38,7 +41,10 @@
         <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="{{ url('admin/profile') }}">My Profile</a>
             <a class="dropdown-item" href="{{ url('admin/profile/edit-profile') }}">Edit Profile</a>
-            <a class="dropdown-item" href="{{ url('admin/settings') }}">Settings</a>
+           @if (auth()->user()->status == 'admin')
+                <a class="dropdown-item" href="{{ url('admin/settings') }}">Settings</a>
+            @endif
+            
             <a class="dropdown-item" href="{{ url('logout') }}">Logout</a>
         </div>
     </div>
