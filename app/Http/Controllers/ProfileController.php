@@ -29,7 +29,7 @@ class ProfileController extends Controller
                     'mobile_no'=>$request->mobile_no,
                     'email'=>$request->email,
                     'address'=>$request->address,
-                    'gender'=>$request->gender
+                    'gender'=>"$request->gender"
                     
                     
                 ]);
