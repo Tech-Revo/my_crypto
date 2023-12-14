@@ -19,7 +19,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{url('admin/profile')}}">My Profile</a>
-                        <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                        <a class="dropdown-item" href="{{url('admin/profile/edit-profile')}}">Edit Profile</a>
                         <a class="dropdown-item" href="{{url('admin/settings')}}">Settings</a>
                         <a class="dropdown-item" href="login.html">Logout</a>
                     </div>
@@ -30,7 +30,7 @@
                         class="fa fa-ellipsis-v"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="{{url('admin/profile')}}">My Profile</a>
-                    <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                    <a class="dropdown-item" href="{{url('admin/profile/edit-profile')}}">Edit Profile</a>
                     <a class="dropdown-item" href="{{url('admin/settings')}}">Settings</a>
                     <a class="dropdown-item" href="login.html">Logout</a>
                 </div>

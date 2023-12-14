@@ -18,7 +18,7 @@ class AdminSeeder extends Seeder
         $userData = [
             'name' => 'Reyan Shrestha',
             'email' => 'reyanshrestha@gmail.com',
-            'gender'=>'male',
+            'gender'=>'Male',
             'password' => Hash::make('password'),
             'address' => 'Kathmandu',
             'mobile_no' => '9825915122',

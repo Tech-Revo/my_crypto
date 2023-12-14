@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="col-sm-5 col-6 text-right m-b-30">
-                        <a href="edit-profile.html" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit
+                        <a href="{{url('admin/profile/edit-profile')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus"></i> Edit
                             Profile</a>
                     </div>
                 </div>

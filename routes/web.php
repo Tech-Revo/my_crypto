@@ -41,6 +41,7 @@ Route::group(
         });
 
         Route::get('admin/profile', [ProfileController::class, 'index']);
+        Route::get('admin/profile/edit-profile', [ProfileController::class, 'editProfileIndex']);
         Route::get('admin/chat', [ChatController::class, 'index']);
     }
 );
