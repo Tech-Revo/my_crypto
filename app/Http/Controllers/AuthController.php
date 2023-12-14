@@ -39,4 +39,18 @@ class AuthController extends Controller
         
         
     }
+
+    public function logout(Request $request)
+    {
+        $user = $request->user();
+        if ($user) {
+            auth()->logout();
+
+            sweetalert()->addSuccess('Logout Successfully!');
+            return redirect('/login');
+        } else {
+            sweetalert()->addWarning('User is not authenticated!');
+            return redirect('/login');
+        }
+    }
 }

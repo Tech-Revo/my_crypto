@@ -31,6 +31,7 @@ Route::get('login/forgot-password', [ForgotPasswordController::class, 'index']);
 Route::group(
     ['middleware' => 'auth'],
     function () {
+        Route::get('logout', [AuthController::class, 'logout']);
 
         Route::get('admin/dashboard', [DashboardController::class, 'index']);
 
