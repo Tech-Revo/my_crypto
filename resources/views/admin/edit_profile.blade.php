@@ -18,15 +18,25 @@
                         <h4 class="page-title">Edit Profile</h4>
                     </div>
                 </div>
-                <form action="{{ url('admin/profile/edit-profile/' . auth()->user()->id) }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('admin/profile/edit-profile/' . auth()->user()->id) }}" method="post"
+                    enctype="multipart/form-data">
                     @csrf
                     <div class="card-box">
                         <h3 class="card-title">Basic Informations</h3>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="profile-img-wrap">
+
+                                    @php
+                                        $profileImage = auth()
+                                            ->user()
+                                            ->getFirstMediaUrl('profile_image');
+                                    @endphp
+
+
                                     <img class="inline-block"
-                                        src="{{ auth()->user()->getFirstMediaUrl('profile_image') }}"  alt="user">
+                                        src="{{ $profileImage ? $profileImage : url('assets/img/user.jpg') }}"
+                                        alt="user">
                                     <div class="fileupload btn">
                                         <span class="btn-text">edit</span>
                                         <input class="upload" type="file" name="profile_image">
@@ -70,9 +80,9 @@
                                         <div class="col-md-6">
                                             <div class="form-group form-focus">
                                                 <label class="focus-label">Address</label>
-                                                    <input type="text" name="address" class="form-control floating" 
-                                                        value="{{ auth()->user()->address }}">
-                                                
+                                                <input type="text" name="address" class="form-control floating"
+                                                    value="{{ auth()->user()->address }}">
+
                                             </div>
                                         </div>
                                     </div>
