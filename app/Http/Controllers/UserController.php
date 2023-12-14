@@ -16,4 +16,8 @@ class UserController extends Controller
         $user = User::latest()->get();
         return response()->json(['data' => $user]);
     }
+
+    public function addUserIndex(){
+        return view('admin.add_user');
+    }
 }
