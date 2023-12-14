@@ -29,6 +29,7 @@
                 <a class="dropdown-item" href="{{ url('admin/profile/edit-profile') }}">Edit Profile</a>
                  @if (auth()->user()->status == 'admin')
                     <a class="dropdown-item" href="{{ url('admin/settings') }}">Settings</a>
+                    <a class="dropdown-item" href="{{ url('admin/pulse') }}">Analytics</a>
                 @endif
                 
                 <a class="dropdown-item" href="{{ url('logout') }}">Logout</a>
@@ -43,6 +44,7 @@
             <a class="dropdown-item" href="{{ url('admin/profile/edit-profile') }}">Edit Profile</a>
            @if (auth()->user()->status == 'admin')
                 <a class="dropdown-item" href="{{ url('admin/settings') }}">Settings</a>
+                <a class="dropdown-item" href="{{ url('admin/pulse') }}">Analytics</a>
             @endif
             
             <a class="dropdown-item" href="{{ url('logout') }}">Logout</a>
