@@ -25,6 +25,7 @@ class User extends Authenticatable implements HasMedia
         return 'web';
     }
 
+   
     /**
      * The attributes that are mass assignable.
      *
