@@ -12,10 +12,8 @@
                      <a href="#"><i class="fa fa-user"></i> <span> Users </span> <span
                              class="menu-arrow"></span></a>
                      <ul style="display: none;">
-                         <li><a href="employees.html">Employees List</a></li>
-                         <li><a href="leaves.html">Leaves</a></li>
-                         <li><a href="holidays.html">Holidays</a></li>
-                         <li><a href="attendance.html">Attendance</a></li>
+                         <li><a href="{{url('admin/users')}}">Users List</a></li>
+                         
                      </ul>
                  </li>
 

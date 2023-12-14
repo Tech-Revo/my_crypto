@@ -8,6 +8,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +35,8 @@ Route::group(
         Route::get('logout', [AuthController::class, 'logout']);
 
         Route::get('admin/dashboard', [DashboardController::class, 'index']);
+
+        Route::get('admin/users', [UserController::class, 'index']);
 
         Route::group(['prefix' => 'admin/settings'], function () {
             Route::get('/', [SettingController::class, 'index']);
