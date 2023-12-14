@@ -26,6 +26,7 @@ Route::get('/', [IndexController::class, 'index']);
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
+Route::get('/complete_registration', [UserController::class, 'emailVerified']);
 
 Route::get('login/forgot-password', [ForgotPasswordController::class, 'index']);
 
@@ -39,6 +40,8 @@ Route::group(
         Route::get('admin/users', [UserController::class, 'index']);
         Route::get('admin/users/data', [UserController::class, 'userDataAjax']);
         Route::get('admin/users/add', [UserController::class, 'addUserIndex']);
+        Route::post('admin/users/add', [UserController::class, 'save']);
+        
 
         Route::group(['prefix' => 'admin/settings'], function () {
             Route::get('/', [SettingController::class, 'index']);

@@ -20,30 +20,47 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
-                        <form>
+                        <form action="{{url('admin/users/add')}}" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Name <span class="text-danger">*</span></label>
                                         <input class="form-control" type="text" name="name">
+                                        @error('name')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Email</label>
                                         <input class="form-control" type="text" name="email">
+                                         @error('email')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Address</label>
                                         <input class="form-control" type="text" name="address">
+                                         @error('address')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Mobile No <span class="text-danger">*</span></label>
                                         <input class="form-control" type="text" name="mobile_no">
+                                         @error('mobile_no')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -54,11 +71,19 @@
                                             <option value="Female">Female</option>
                                         </select>
                                     </div>
+                                     @error('gender')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input class="form-control" type="password">
+                                        <input class="form-control" type="password" name="password">
+                                         @error('password')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
                                
