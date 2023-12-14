@@ -18,7 +18,7 @@
                         <h4 class="page-title">Edit Profile</h4>
                     </div>
                 </div>
-                <form action="{{ url('admin/profile/edit-profile/' . auth()->user()->id) }}" method="post">
+                <form action="{{ url('admin/profile/edit-profile/' . auth()->user()->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-box">
                         <h3 class="card-title">Basic Informations</h3>
@@ -26,10 +26,10 @@
                             <div class="col-md-12">
                                 <div class="profile-img-wrap">
                                     <img class="inline-block"
-                                        src="{{ auth()->user()->getFirstMediaUrl('profile_image') }}" alt="user">
+                                        src="{{ auth()->user()->getFirstMediaUrl('profile_image') }}"  alt="user">
                                     <div class="fileupload btn">
                                         <span class="btn-text">edit</span>
-                                        <input class="upload" type="file">
+                                        <input class="upload" type="file" name="profile_image">
                                     </div>
                                 </div>
                                 <div class="profile-basic">

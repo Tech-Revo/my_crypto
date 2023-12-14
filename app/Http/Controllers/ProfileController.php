@@ -33,6 +33,10 @@ class ProfileController extends Controller
                     
                     
                 ]);
+                if($request->profile_image){
+                    $user->clearMediaCollection('profile_image');
+                    $user->addMedia($request->profile_image)->toMediaCollection('profile_image');
+                }
                 return $user;
                 
                 
