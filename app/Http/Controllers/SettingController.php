@@ -10,4 +10,8 @@ class SettingController extends Controller
         return view('admin.setting.setting');
         
     }
+
+    public function appSettingIndex(){
+        return view('admin.setting.app_setting');
+    }
 }

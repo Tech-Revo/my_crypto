@@ -22,7 +22,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">App Settings</h4>
                                 <p class="card-text">Configure your app settings here.</p>
-                                <a href="#" class="card-link">General Settings</a>
+                                <a href="{{url('admin/settings/app-settings')}}" class="card-link">General Settings</a>
                             </div>
                         </div>
                     </div>

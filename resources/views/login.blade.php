@@ -16,18 +16,27 @@
         <div class="account-page">
 			<div class="account-center">
 				<div class="account-box">
-                    <form action="" class="form-signin">
+                    <form action="{{url('login')}}" method="post" class="form-signin">
+                        @csrf
 						<div class="account-logo">
-                            <a href="index-2.html"><img src="{{url('assets/img/logo_transparent.png')}}" alt=""></a>
+                            <a href="{{url('/')}}"><img src="{{url('assets/img/logo_transparent.png')}}" alt=""></a>
                         </div>
                         <br>
                         <div class="form-group">
-                            <label>Username or Email</label>
-                            <input type="text" autofocus="" class="form-control">
+                            <label>Email</label>
+                            <input type="text" autofocus="" name="email" class="form-control">
+                            @error('email')
+                            <span class="text-danger">{{$message}}</span>
+                                
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control">
+                            <input type="password" name="password" class="form-control">
+                             @error('password')
+                            <span class="text-danger">{{$message}}</span>
+                                
+                            @enderror
                         </div>
                         <div class="form-group text-right">
                             <a href="{{url('login/forgot-password')}}">Forgot your password?</a>

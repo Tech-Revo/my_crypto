@@ -12,13 +12,13 @@
                 
                 <li class="nav-item dropdown has-arrow">
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
-                        <span class="user-img"><img class="rounded-circle" src="{{url('assets/img/user.jpg')}}" width="40"
+                        <span class="user-img"><img class="rounded-circle" src="{{auth()->user()->getFirstMediaUrl('profile_image')}}" width="70"
                                 alt="Admin">
                             <span class="status online"></span></span>
                         <span>Admin</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="profile.html">My Profile</a>
+                        <a class="dropdown-item" href="{{url('admin/profile')}}">My Profile</a>
                         <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
                         <a class="dropdown-item" href="{{url('admin/settings')}}">Settings</a>
                         <a class="dropdown-item" href="login.html">Logout</a>
@@ -29,7 +29,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
                         class="fa fa-ellipsis-v"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                    <a class="dropdown-item" href="{{url('admin/profile')}}">My Profile</a>
                     <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
                     <a class="dropdown-item" href="{{url('admin/settings')}}">Settings</a>
                     <a class="dropdown-item" href="login.html">Logout</a>
