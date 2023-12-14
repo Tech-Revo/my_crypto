@@ -18,7 +18,8 @@
                         <h4 class="page-title">Edit Profile</h4>
                     </div>
                 </div>
-                <form>
+                <form action="{{ url('admin/profile/edit-profile/' . auth()->user()->id) }}" method="post">
+                    @csrf
                     <div class="card-box">
                         <h3 class="card-title">Basic Informations</h3>
                         <div class="row">
@@ -36,31 +37,30 @@
                                         <div class="col-md-6">
                                             <div class="form-group form-focus">
                                                 <label class="focus-label">Name</label>
-                                                <input type="text" class="form-control floating"
+                                                <input type="text" name="name" class="form-control floating"
                                                     value="{{ auth()->user()->name }}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group form-focus">
                                                 <label class="focus-label">Email</label>
-                                                <input type="text" class="form-control floating"
+                                                <input type="text" name="email" class="form-control floating"
                                                     value="{{ auth()->user()->email }}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group form-focus">
                                                 <label class="focus-label">Phone No</label>
-                                                <div class="cal-icon">
-                                                    <input class="form-control floating" type="text"
-                                                        value="{{ auth()->user()->mobile_no }}">
-                                                </div>
+                                                <input type="text" name="mobile_no" class="form-control floating"
+                                                    value="{{ auth()->user()->mobile_no }}">
+
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group form-focus select-focus">
                                                 <label class="focus-label">Gendar</label>
-                                                <select class="select form-control floating">
-                                                    <option value="{{ auth()->user()->gender }} selected">
+                                                <select class="select form-control floating" name="gender">
+                                                    <option value="{{ auth()->user()->gender }}">
                                                         {{ auth()->user()->gender }}</option>
                                                     <option value="Male">Male</option>
                                                     <option value="Female">Female</option>
@@ -68,12 +68,11 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group form-focus select-focus">
+                                            <div class="form-group form-focus">
                                                 <label class="focus-label">Address</label>
-                                                <div class="cal-icon">
-                                                    <input class="form-control floating" type="text"
+                                                    <input type="text" name="address" class="form-control floating" 
                                                         value="{{ auth()->user()->address }}">
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -84,7 +83,7 @@
 
 
                     <div class="text-center m-t-20">
-                        <button class="btn btn-primary submit-btn" type="button">Save</button>
+                        <button class="btn btn-primary submit-btn" type="submit">Update Profile</button>
                     </div>
                 </form>
 
