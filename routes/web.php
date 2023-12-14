@@ -37,6 +37,7 @@ Route::group(
         Route::get('admin/dashboard', [DashboardController::class, 'index']);
 
         Route::get('admin/users', [UserController::class, 'index']);
+        Route::get('admin/users/data', [UserController::class, 'userDataAjax']);
 
         Route::group(['prefix' => 'admin/settings'], function () {
             Route::get('/', [SettingController::class, 'index']);
