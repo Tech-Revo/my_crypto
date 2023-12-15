@@ -35,7 +35,7 @@
                 <div class="col-md-3 left_logo_design">
                     <div class="full">
                         <div class="logo">
-                            <a href="index.html"><img class="img-responsive" src="{{ url('assets/img/logo_transparent.png') }}"
+                            <a href="{{url('/')}}"><img class="img-responsive" src="{{ url('assets/img/logo_transparent.png') }}"
                                     alt="#" style="width: 40%" /></a>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                         <div class="menu">
                             <ul class="clearfix">
                                 <li class="active"><a href="{{ url('/') }}">Home</a></li>
-                                <li><a href="#">About</a></li>
+                                <li class="active"><a href="{{url('market')}}">Market</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li>
                                     <a href="#">Pages</a>
