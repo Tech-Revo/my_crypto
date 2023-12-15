@@ -36,6 +36,41 @@
         </a>
     </div>
     <!-- slider -->
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [{
+                        "proName": "FOREXCOM:SPXUSD",
+                        "title": "S&P 500"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100"
+                    },
+                    {
+                        "proName": "FX_IDC:EURUSD",
+                        "title": "EUR to USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:BTCUSD",
+                        "title": "Bitcoin"
+                    },
+                    {
+                        "proName": "BITSTAMP:ETHUSD",
+                        "title": "Ethereum"
+                    }
+                ],
+                "showSymbolLogo": true,
+                "colorTheme": "light",
+                "isTransparent": true,
+                "displayMode": "adaptive",
+                "locale": "en"
+            }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
     <!-- section -->
     <div class="running_stock">
         <div class="container-fluid">
@@ -231,7 +266,7 @@
                 <div class="col-md-4 margin_top_50">
                     <div class="full feature_b1 text_align_center">
                         <div class="icon full">
-                            <img src="{{url('assets/img/f2.png')}}" alt="#">
+                            <img src="{{ url('assets/img/f2.png') }}" alt="#">
                         </div>
                         <div class="full">
                             <h4>Fast Transaction</h4>
@@ -244,7 +279,7 @@
                 <div class="col-md-4 margin_top_50">
                     <div class="full feature_b1 text_align_center">
                         <div class="icon full">
-                            <img src="{{url('assets/img/f3.png')}}" alt="#">
+                            <img src="{{ url('assets/img/f3.png') }}" alt="#">
                         </div>
                         <div class="full">
                             <h4>24/7 Trading</h4>
@@ -257,7 +292,7 @@
                 <div class="col-md-4 margin_top_50">
                     <div class="full feature_b1 text_align_center">
                         <div class="icon full">
-                            <img src="{{url('assets/img/f1.png')}}" alt="#">
+                            <img src="{{ url('assets/img/f1.png') }}" alt="#">
                         </div>
                         <div class="full">
                             <h4>Free Consulting</h4>
@@ -289,7 +324,7 @@
                 <div class="col-md-12">
                     <div class="full margin_top_30">
                         <div class="full_main_video">
-                            <img src="{{url('assets/img/video.png')}}" class="img-responsive" alt="#" />
+                            <img src="{{ url('assets/img/video.png') }}" class="img-responsive" alt="#" />
                             <div class="playpause"></div>
                         </div>
                     </div>
@@ -298,7 +333,7 @@
         </div>
     </section>
     <!-- end section -->
-   
+
 
     <!-- section -->
     <div class="layout_padding">
@@ -331,7 +366,8 @@
                                     <div class="row">
                                         <div class="col-md-7">
                                             <div class="full">
-                                                <img class="img-responsive" src="{{url('assets/img/bost3.jpg')}}" alt="#" />
+                                                <img class="img-responsive" src="{{ url('assets/img/bost3.jpg') }}"
+                                                    alt="#" />
                                             </div>
                                         </div>
                                         <div class="col-md-5">
@@ -364,7 +400,8 @@
                                     <div class="row">
                                         <div class="col-md-7">
                                             <div class="full">
-                                                <img class="img-responsive" src="{{url('assets/img/bost2.jpg')}}" alt="#" />
+                                                <img class="img-responsive" src="{{ url('assets/img/bost2.jpg') }}"
+                                                    alt="#" />
                                             </div>
                                         </div>
                                         <div class="col-md-5">
@@ -397,7 +434,8 @@
                                     <div class="row">
                                         <div class="col-md-7">
                                             <div class="full">
-                                                <img class="img-responsive" src="{{url('assets/img/bost1.jpg')}}" alt="#" />
+                                                <img class="img-responsive" src="{{ url('assets/img/bost1.jpg') }}"
+                                                    alt="#" />
                                             </div>
                                         </div>
                                         <div class="col-md-5">
@@ -430,7 +468,8 @@
                                     <div class="row">
                                         <div class="col-md-7">
                                             <div class="full">
-                                                <img class="img-responsive" src="{{url('assets/img/bost3.jpg')}}" alt="#" />
+                                                <img class="img-responsive" src="{{ url('assets/img/bost3.jpg') }}"
+                                                    alt="#" />
                                             </div>
                                         </div>
                                         <div class="col-md-5">
@@ -463,7 +502,8 @@
                                     <div class="row">
                                         <div class="col-md-7">
                                             <div class="full">
-                                                <img class="img-responsive" src="{{url('assets/img/bost2.jpg')}}" alt="#" />
+                                                <img class="img-responsive" src="{{ url('assets/img/bost2.jpg') }}"
+                                                    alt="#" />
                                             </div>
                                         </div>
                                         <div class="col-md-5">
