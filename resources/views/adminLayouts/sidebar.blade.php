@@ -33,8 +33,8 @@
                      <a href="#"><i class="fa fa-envelope"></i> <span> Email</span> <span
                              class="menu-arrow"></span></a>
                      <ul style="display: none;">
-                         <li><a href="compose.html">Compose Mail</a></li>
-                         <li><a href="inbox.html">Inbox</a></li>
+                         <li><a href="{{url('admin/email/compose')}}">Compose Mail</a></li>
+                         <li><a href="{{url('admin/email/send-email')}}">Send Email</a></li>
                          <li><a href="mail-view.html">Mail View</a></li>
                      </ul>
                  </li>

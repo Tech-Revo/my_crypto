@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MarketController;
@@ -64,5 +65,8 @@ Route::group(
         Route::get('admin/contact_us',[ContactController::class, 'adminIndex']);
         Route::get('admin/contact_us/data', [ContactController::class, 'contactDataAjax']);
         Route::get('admin/contact_us/data/delete/{id}', [ContactController::class, 'deleteContact']);
+
+        Route::get('admin/email/send-email', [EmailController::class, 'sendEmailIndex']);
+        Route::get('admin/email/compose',[EmailController::class, 'composeEmailIndex']);
     }
 );
