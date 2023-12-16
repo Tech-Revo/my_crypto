@@ -8,13 +8,19 @@
                  </li>
 
                  @if (auth()->user()->status == 'admin')
-                     <li class="submenu">
+                     <li class="submenu {{ request()->is('admin/users') ? 'active' : null }}">
                          <a href="#"><i class="fa fa-user"></i> <span> Users </span> <span
                                  class="menu-arrow"></span></a>
                          <ul style="display: none;">
                              <li><a href="{{ url('admin/users') }}">Users List</a></li>
 
                          </ul>
+                     </li>
+                 @endif
+
+                  @if (auth()->user()->status == 'admin')
+                     <li class="{{ request()->is('admin/contact_us') ? 'active' : null }}">
+                         <a href="{{ url('admin/contact_us') }}"><i class='bx bxs-phone-call'></i> <span>Contact Us</span></a>
                      </li>
                  @endif
 

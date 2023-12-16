@@ -60,5 +60,8 @@ Route::group(
         Route::get('admin/profile/edit-profile', [ProfileController::class, 'editProfileIndex']);
         Route::post('admin/profile/edit-profile/{id}', [ProfileController::class, 'updateProfile']);
         Route::get('admin/chat', [ChatController::class, 'index']);
+        Route::get('admin/contact_us',[ContactController::class, 'adminIndex']);
+        Route::get('admin/contact_us/data', [ContactController::class, 'contactDataAjax']);
+        Route::get('admin/contact_us/data/delete/{id}', [ContactController::class, 'deleteContact']);
     }
 );
