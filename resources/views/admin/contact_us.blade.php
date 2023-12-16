@@ -114,7 +114,7 @@
         });
 
         function deleteAccess(id) {
-            if (confirm('Are you sure you want to delete this user account?')) {
+            if (confirm('Are you sure you want to delete this contact?')) {
                 $.ajax({
                     url: '/admin/contact_us/data/delete/' + id,
                     type: 'GET',
@@ -124,7 +124,6 @@
                     success: function(response) {
                         if (response.status === 'success') {
                              
-
                             $('#table_data').DataTable().ajax.reload();
                         } else {
 
