@@ -110,7 +110,9 @@
                             information.
                         </label>
                     </div>
-                   
+                    <div class="form-group text-center">
+                        <button class="btn btn-primary" type="submit" id="signupButton" disabled>Signup</button>
+                    </div>
                 </form>
 
 

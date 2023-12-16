@@ -7,15 +7,16 @@
                      <a href="{{ url('admin/dashboard') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                  </li>
 
+                 @if (auth()->user()->status == 'admin')
+                     <li class="submenu">
+                         <a href="#"><i class="fa fa-user"></i> <span> Users </span> <span
+                                 class="menu-arrow"></span></a>
+                         <ul style="display: none;">
+                             <li><a href="{{ url('admin/users') }}">Users List</a></li>
 
-                 <li class="submenu">
-                     <a href="#"><i class="fa fa-user"></i> <span> Users </span> <span
-                             class="menu-arrow"></span></a>
-                     <ul style="display: none;">
-                         <li><a href="{{ url('admin/users') }}">Users List</a></li>
-
-                     </ul>
-                 </li>
+                         </ul>
+                     </li>
+                 @endif
 
 
                  <li>
@@ -33,11 +34,9 @@
                  </li>
 
                  @if (auth()->user()->status == 'admin')
-                     
                      <li class="{{ request()->is('admin/settings*') ? 'active' : null }}">
                          <a href="{{ url('admin/settings') }}"><i class="fa fa-cog"></i> <span>Settings</span></a>
                      </li>
-                     
                  @endif
 
 
