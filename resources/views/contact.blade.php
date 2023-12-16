@@ -5,6 +5,7 @@
     @include('homeLayouts.header')
     @stack('title')
     <title>Coin Me | Contact Us</title>
+    @livewireStyles()
 
 
 </head>
@@ -84,26 +85,10 @@
                <div class="col-md-8">
                   <div class="contact_form">
                      <div class="form_section">
-                        <form class="form_contant" action="index.html">
-                           <fieldset class="row">
-                              <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                 <input class="field_custom" placeholder="Websire URL" type="text">
-                              </div>
-                              <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                 <input class="field_custom" placeholder="Your name" type="text">
-                              </div>
-                              <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                 <input class="field_custom" placeholder="Email adress" type="email">
-                              </div>
-                              <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                 <input class="field_custom" placeholder="Phone number" type="text">
-                              </div>
-                              <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                 <textarea class="field_custom" placeholder="Messager"></textarea>
-                              </div>
-                              <div class="center"><a class="read_more_bt" href="#">SUBMIT NOW</a></div>
-                           </fieldset>
-                        </form>
+                        @livewire('contact_us')
+
+
+
                      </div>
                   </div>
                </div>
@@ -117,6 +102,7 @@
    
 
     @include('homeLayouts.footer')
+    @livewireScripts()
 </body>
 
 </html>
