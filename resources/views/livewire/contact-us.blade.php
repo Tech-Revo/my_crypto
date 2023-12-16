@@ -1,5 +1,5 @@
 <div>
-    <form class="form_contant" action="index.html">
+    <form class="form_contant" wire:submit="save">
         <fieldset class="row">
             <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-2">
                 <input class="field_custom" placeholder="Name" type="text" wire:model.live="name">
@@ -27,7 +27,7 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <div class="center"><a class="read_more_bt" href="#">SUBMIT NOW</a></div>
+            <div class="center"><button class="read_more_bt" type="submit">SUBMIT NOW</button></div>
         </fieldset>
     </form>
 </div>

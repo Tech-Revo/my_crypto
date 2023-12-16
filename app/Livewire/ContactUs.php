@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\ContactUs as ModelsContactUs;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
 
@@ -22,6 +23,16 @@ class ContactUs extends Component
     protected $messages = [
         'id_number.exists' => 'The provided ID number does not exist.',
     ];
+
+    public function save(){
+        ModelsContactUs::create(
+            $this->validate()
+
+
+        );
+        sweetalert()->addSuccess('Contact has been send successfully!');
+        return $this->redirect('/contact-us');
+    }
     
     public function render()
     {
