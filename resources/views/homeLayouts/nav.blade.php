@@ -103,7 +103,7 @@
 
                                     </ul>
                                 </li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{url('contact-us')}}">Contact</a></li>
 
                                 <li><a href="{{ url('/login') }}"
                                         class="btn-danger text-light px-2 justify-content-end">login</a></li>

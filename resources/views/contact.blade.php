@@ -3,6 +3,9 @@
 
 <head>
     @include('homeLayouts.header')
+    @stack('title')
+    <title>Coin Me | Contact Us</title>
+
 
 </head>
 

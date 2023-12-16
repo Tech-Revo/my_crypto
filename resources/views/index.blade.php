@@ -3,6 +3,7 @@
 
 <head>
     @include('homeLayouts.header')
+    <title>Coin Me</title>
 
 </head>
 
