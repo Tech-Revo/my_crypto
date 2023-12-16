@@ -29,6 +29,8 @@
                      <a href="{{ url('admin/chat') }}"><i class="fa fa-comments"></i> <span>Chat</span> <span
                              class="badge badge-pill bg-primary float-right">5</span></a>
                  </li>
+
+                  @if (auth()->user()->status == 'admin')
                  <li class="submenu">
                      <a href="#"><i class="fa fa-envelope"></i> <span> Email</span> <span
                              class="menu-arrow"></span></a>
@@ -39,6 +41,7 @@
                          
                      </ul>
                  </li>
+                  @endif
 
                  @if (auth()->user()->status == 'admin')
                      <li class="{{ request()->is('admin/settings*') ? 'active' : null }}">
