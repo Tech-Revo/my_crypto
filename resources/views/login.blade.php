@@ -45,6 +45,9 @@
                             <button type="submit" class="btn btn-primary account-btn">Login</button>
                         </div>
                         <div class="text-center register-link">
+                            No Coin Me account yet? <a href="{{url('register-account')}}">Sign Up</a>
+                        </div>
+                        <div class="text-center register-link">
                             <a href="{{url('/')}}">Back to Home Page</a>
                         </div>
                        

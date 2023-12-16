@@ -27,6 +27,8 @@ Route::get('/', [IndexController::class, 'index']);
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
+Route::get('register-account', [UserController::class, 'registerIndex']);
+Route::post('register-account', [UserController::class, 'register']);
 Route::get('/complete_registration', [UserController::class, 'emailVerified']);
 
 Route::get('login/forgot-password', [ForgotPasswordController::class, 'index']);

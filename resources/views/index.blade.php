@@ -250,6 +250,8 @@
         </div>
     </section>
     <!-- end section -->
+
+    
     <!-- section -->
     <div class="layout_padding">
         <div class="container">
@@ -540,7 +542,7 @@
         </div>
     </div>
     <!-- end section -->
-
+<script src="https://www.cryptohopper.com/widgets/js/script"></script>
     @include('homeLayouts.footer')
 </body>
 

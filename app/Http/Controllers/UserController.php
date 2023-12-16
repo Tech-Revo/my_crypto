@@ -103,4 +103,11 @@ class UserController extends Controller
             return back()->with('error', $e->getMessage());
         }
     }
+    public function registerIndex(){
+        return view('register_account');
+    }
+
+    public function register(Request $request){
+        
+    }
 }
