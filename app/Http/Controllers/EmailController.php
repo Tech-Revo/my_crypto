@@ -20,6 +20,63 @@ class EmailController extends Controller
         return view('admin.email.send_email');
     }
 
+    public function sendEmailData(){
+        $email=Email::where('user_id',auth()->user()->id)->latest()->get();
+        return response()->json(['data'=>$email]);
+    }
+
+    public function viewSendEmail($emailID){
+        $email = Email::find($emailID);
+        return view('admin.email.view_email', compact('email'));
+        
+    }
+
+    public function viewTrash(){
+        return view('admin.email.trash');
+    }
+
+    public function trashData()
+    {
+        $email=Email::onlyTrashed()->get();
+        return response()->json(['data' => $email]);
+    }
+
+    public function permanentDelete($id)
+    {
+        $email = Email::withTrashed()->find($id);
+
+        if ($email) {
+            $email->forceDelete();
+            return response()->json(['status' => 'success', 'message' => 'Email deleted successfully.']);
+        } else {
+            return response()->json(['status' => 'error', 'message' => 'Email Not Found!']);
+        }
+    }
+
+    public function restoreDeletedEmail($id)
+    {
+        $email = Email::withTrashed()->find($id);
+
+        if ($email) {
+            $email->restore();
+            return response()->json(['status' => 'success', 'message' => 'Email restored successfully.']);
+        } else {
+            return response()->json(['status' => 'error', 'message' => 'Email Not Found!']);
+        }
+    }
+
+    public function deleteEmail($id)
+    {
+        $email = Email::find($id);
+
+        if ($email) {
+            $email->delete();
+            return response()->json(['status' => 'success', 'message' => 'Email deleted successfully.']);
+        } else {
+            return response()->json(['status' => 'error', 'message' => 'Email Not Found!']);
+        }
+    }
+
     public function sendEmail(CreateComposeRequest $request){
 
         try{

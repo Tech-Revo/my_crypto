@@ -24,7 +24,7 @@
                             <a href="{{url('admin/email/send-email')}}">Sent Mail</a>
                         </li>
                         <li>
-                            <a href="#">Trash</a>
+                            <a href="{{url('admin/email/trash')}}">Trash</a>
                         </li>
                        
                     </ul>
@@ -72,10 +72,7 @@
                                     <div class="text-center compose-btn">
                                         <button class="btn btn-primary"><span>Send</span> <i
                                                 class="fa fa-send m-l-5"></i></button>
-                                        <button class="btn btn-success m-l-5" type="button"><span>Draft</span> <i
-                                                class="fa fa-floppy-o m-l-5"></i></button>
-                                        <button class="btn btn-success m-l-5" type="button"><span>Delete</span> <i
-                                                class="fa fa-trash-o m-l-5"></i></button>
+                                       
                                     </div>
                                 </div>
                             </form>

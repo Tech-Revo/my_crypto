@@ -67,7 +67,14 @@ Route::group(
         Route::get('admin/contact_us/data/delete/{id}', [ContactController::class, 'deleteContact']);
 
         Route::get('admin/email/send-email', [EmailController::class, 'sendEmailIndex']);
+        Route::get('admin/email/send-email/data', [EmailController::class, 'sendEmailData']);
+        Route::get('admin/email/send-email/data/view/{id}', [EmailController::class, 'viewSendEmail']);
+        Route::get('admin/email/send-email/data/delete/{id}', [EmailController::class, 'deleteEmail']);
         Route::get('admin/email/compose',[EmailController::class, 'composeEmailIndex']);
         Route::post('admin/email/compose', [EmailController::class, 'sendEmail']);
+        Route::get('admin/email/trash', [EmailController::class, 'viewTrash']);
+        Route::get('admin/email/trash/data', [EmailController::class, 'trashData']);
+        Route::get('admin/email/trash/delete/{id}', [EmailController::class, 'permanentDelete']);
+        Route::get('admin/email/trash/restore/{id}', [EmailController::class, 'restoreDeletedEmail']);
     }
 );

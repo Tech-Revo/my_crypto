@@ -35,6 +35,7 @@
                      <ul style="display: none;">
                          <li><a href="{{url('admin/email/compose')}}">Compose Mail</a></li>
                          <li><a href="{{url('admin/email/send-email')}}">View Send Email</a></li>
+                         <li><a href="{{url('admin/email/trash')}}">View Trash</a></li>
                          
                      </ul>
                  </li>
