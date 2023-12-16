@@ -33,10 +33,7 @@
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Mobile No</th>
-                                        <th>Address</th>
-                                        <th>Gender</th>
-                                       
+                                        <th>ID number</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -74,14 +71,9 @@
                         "data": "email"
                     },
                      {
-                        "data": "mobile_no"
+                        "data": "id_number"
                     },
-                     {
-                        "data": "address"
-                    },
-                     {
-                        "data": "gender"
-                    },
+                    
                     
                     {
                         data: null,
