@@ -87,7 +87,7 @@
                         data: null,
                         render: function(data, type, row) {
                             return '<button class="btn btn-danger btn-sm" onclick="deleteAccess(' +
-                                row.id + ')">Delete</button>';
+                                row.id + ')">Delete</button> <button class="btn btn-primary btn-sm" onclick="viewUser(' + row.id + ')">View</button>';
                         }
                     }
 
@@ -140,7 +140,19 @@
                 });
             }
         }
+
+        
     </script>
+
+    <script>
+    function viewUser(userId) {
+        var baseUrl = '{{ url("admin/users/data") }}';
+        var url = baseUrl + '/' + userId;
+
+        // Redirect to the constructed URL
+        window.location.href = url;
+    }
+</script>
 
 
     <div class="sidebar-overlay" data-reff=""></div>

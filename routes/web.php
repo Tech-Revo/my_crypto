@@ -48,6 +48,7 @@ Route::group(
         Route::get('admin/users/data', [UserController::class, 'userDataAjax']);
         Route::get('admin/users/add', [UserController::class, 'addUserIndex']);
         Route::post('admin/users/add', [UserController::class, 'save']);
+        Route::get('admin/users/data/{id}', [UserController::class, 'viewUserData']);
         
 
         Route::group(['prefix' => 'admin/settings'], function () {

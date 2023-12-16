@@ -32,6 +32,13 @@ class UserController extends Controller
         return view('admin.add_user');
     }
 
+    public function viewUserData(Request $request,$id){
+
+        $user=User::find($id);
+        return view('admin.view_user_data',compact('user'));
+        
+    }
+
     public function save(CreateUserRequest $request)
     {
         $request->validate([]);

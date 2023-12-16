@@ -8,11 +8,11 @@
                  </li>
 
                  @if (auth()->user()->status == 'admin')
-                     <li class="submenu {{ request()->is('admin/users') ? 'active' : null }}">
+                     <li class="submenu {{ request()->is('admin/users*') ? 'active' : null }}">
                          <a href="#"><i class="fa fa-user"></i> <span> Users </span> <span
                                  class="menu-arrow"></span></a>
                          <ul style="display: none;">
-                             <li><a href="{{ url('admin/users') }}">Users List</a></li>
+                             <li><a href="{{ url('admin/users') }}">Client List</a></li>
 
                          </ul>
                      </li>
