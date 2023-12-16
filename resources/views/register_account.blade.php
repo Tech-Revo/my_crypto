@@ -17,34 +17,51 @@
         <div class="account-page">
             <div class="container w3-display-middle">
 
-                <form action="http://dreamguys.co.in/preclinic/template/index.html" class="form-signin">
+                <form action="{{url('register-account')}}" method="post" class="form-signin">
+                    @csrf
                     <div class="account-logo">
-                        <a href="{{ url('/') }}"><img src="{{ url('assets/img/logo_transparent.png') }}"
+                        <a href="{{ url('/register-account') }}"><img src="{{ url('assets/img/logo_transparent.png') }}"
                                 alt="Coin Me Logo"></a>
                     </div><br>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Name<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" name="name">
+                                @error('name')
+                                <span class="text-danger">{{$message}}</span>
+                                    
+                                @enderror
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Email<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" name="email">
+                                 @error('name')
+                                <span class="text-danger">{{$message}}</span>
+                                    
+                                @enderror
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>ID Number<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" name="id_number">
+                                 @error('id_number')
+                                <span class="text-danger">{{$message}}</span>
+                                    
+                                @enderror
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Password<span class="text-danger">*</span></label>
-                                <input class="form-control" type="password">
+                                <input class="form-control" type="password" name="password">
+                                 @error('password')
+                                <span class="text-danger">{{$message}}</span>
+                                    
+                                @enderror
                             </div>
                         </div>
 
@@ -53,25 +70,37 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Upload ID card front photo<span class="text-danger">*</span></label>
-                                <input class="form-control" type="file" id="frontPhotoInput">
+                                <input class="form-control" type="file" id="frontPhotoInput" name="front_image">
                                 <img id="frontPhotoPreview" src="#" alt="Front Photo Preview"
                                     style="max-width: 100px; max-height: 100px; display: none;">
+                                     @error('front_image')
+                                <span class="text-danger">{{$message}}</span>
+                                    
+                                @enderror
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Upload ID card back photo<span class="text-danger">*</span></label>
-                                <input class="form-control" type="file" id="backPhotoInput">
+                                <input class="form-control" type="file" id="backPhotoInput" name="back_image">
                                 <img id="backPhotoPreview" src="#" alt="Front Photo Preview"
                                     style="max-width: 100px; max-height: 100px; display: none;">
+                                     @error('back_image')
+                                <span class="text-danger">{{$message}}</span>
+                                    
+                                @enderror
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Upload ID card in hand<span class="text-danger">*</span></label>
-                                <input class="form-control" type="file" id="handPhotoInput">
+                                <input class="form-control" type="file" id="handPhotoInput" name="id_in_hand">
                                 <img id="handPhotoPreview" src="#" alt="Front Photo Preview"
                                     style="max-width: 100px; max-height: 100px; display: none;">
+                                     @error('id_in_hand')
+                                <span class="text-danger">{{$message}}</span>
+                                    
+                                @enderror
                             </div>
                         </div>
                     </div>

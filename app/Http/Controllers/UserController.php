@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\User\CreateClientRequest;
 use App\Http\Requests\User\CreateUserRequest;
 use App\Mail\UserVerificationMail;
 use App\Models\PasswordReset;
@@ -107,7 +108,7 @@ class UserController extends Controller
         return view('register_account');
     }
 
-    public function register(Request $request){
+    public function register(CreateClientRequest $request){
         
     }
 }
