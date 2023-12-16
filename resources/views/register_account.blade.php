@@ -21,7 +21,7 @@
                     <div class="account-logo">
                         <a href="{{ url('/') }}"><img src="{{ url('assets/img/logo_transparent.png') }}"
                                 alt="Coin Me Logo"></a>
-                    </div>
+                    </div><br>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
@@ -31,32 +31,61 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                               <label>Email<span class="text-danger">*</span></label>
+                                <label>Email<span class="text-danger">*</span></label>
                                 <input class="form-control" type="text">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                               <label>Account Number<span class="text-danger">*</span></label>
+                                <label>ID Number<span class="text-danger">*</span></label>
                                 <input class="form-control" type="text">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                               <label>Password<span class="text-danger">*</span></label>
+                                <label>Password<span class="text-danger">*</span></label>
                                 <input class="form-control" type="password">
                             </div>
                         </div>
+
+
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Upload ID card front photo<span class="text-danger">*</span></label>
+                                <input class="form-control" type="file" id="frontPhotoInput">
+                                <img id="frontPhotoPreview" src="#" alt="Front Photo Preview"
+                                    style="max-width: 100px; max-height: 100px; display: none;">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Upload ID card back photo<span class="text-danger">*</span></label>
+                                <input class="form-control" type="file" id="backPhotoInput">
+                                <img id="backPhotoPreview" src="#" alt="Front Photo Preview"
+                                    style="max-width: 100px; max-height: 100px; display: none;">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Upload ID card in hand<span class="text-danger">*</span></label>
+                                <input class="form-control" type="file" id="handPhotoInput">
+                                <img id="handPhotoPreview" src="#" alt="Front Photo Preview"
+                                    style="max-width: 100px; max-height: 100px; display: none;">
+                            </div>
+                        </div>
                     </div>
-                   
-                   
+
+
+
                     <div class="form-group checkbox">
                         <label>
-                            <input type="checkbox"> I have read and agree the Terms & Conditions
+                            <input type="checkbox" id="termsCheckbox"> I hereby confirm the accuracy of the provided
+                            information.
                         </label>
                     </div>
                     <div class="form-group text-center">
-                        <button class="btn btn-primary account-btn" type="submit">Signup</button>
+                        <button class="btn btn-primary" type="submit" id="signupButton" disabled>Signup</button>
                     </div>
                     <div class="text-center login-link">
                         Already have an account? <a href="{{ url('/login') }}">Login</a>
@@ -71,6 +100,91 @@
     <script src="{{ url('assets/js/adminbootstrap.min.js') }}"></script>
     <script src="{{ url('assets/js/adminapp.js') }}"></script>
     <script src="{{ url('assets/js/jquery.slimscroll.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Preview the front photo before uploading
+            $("#frontPhotoInput").change(function() {
+                readURL(this, '#frontPhotoPreview');
+            });
+        });
+
+        // Function to read and display the image
+        function readURL(input, previewId) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $(previewId).attr('src', e.target.result);
+                    $(previewId).css('display', 'block');
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Preview the front photo before uploading
+            $("#backPhotoInput").change(function() {
+                readURL(this, '#backPhotoPreview');
+            });
+        });
+
+        // Function to read and display the image
+        function readURL(input, previewId) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $(previewId).attr('src', e.target.result);
+                    $(previewId).css('display', 'block');
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Preview the front photo before uploading
+            $("#handPhotoInput").change(function() {
+                readURL(this, '#handPhotoPreview');
+            });
+        });
+
+        // Function to read and display the image
+        function readURL(input, previewId) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $(previewId).attr('src', e.target.result);
+                    $(previewId).css('display', 'block');
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Disable signup button by default
+            $("#signupButton").prop("disabled", true);
+
+            // Enable signup button when checkbox is checked
+            $("#termsCheckbox").change(function() {
+                if ($(this).is(":checked")) {
+                    $("#signupButton").prop("disabled", false);
+                } else {
+                    $("#signupButton").prop("disabled", true);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
