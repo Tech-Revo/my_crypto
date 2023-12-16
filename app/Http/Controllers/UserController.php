@@ -16,7 +16,8 @@ use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('admin.users');
     }
 
@@ -26,16 +27,14 @@ class UserController extends Controller
         return response()->json(['data' => $user]);
     }
 
-    public function addUserIndex(){
+    public function addUserIndex()
+    {
         return view('admin.add_user');
     }
 
     public function save(CreateUserRequest $request)
     {
-        $request->validate([
-           
-
-        ]);
+        $request->validate([]);
         try {
             $user = DB::transaction(function () use ($request) {
                 $user = User::create(
@@ -45,8 +44,8 @@ class UserController extends Controller
                         'email' => $request->email,
                         'address' => $request->address,
                         'gender' => $request->gender,
-                        'password'=>Hash::make($request->password),
-                        'status'=>'client'
+                        'password' => Hash::make($request->password),
+                        'status' => 'client'
 
                     ]
                 );
@@ -73,7 +72,7 @@ class UserController extends Controller
 
     public function emailVerified(Request $request)
     {
-       
+
         $token = request()->query('token');
 
         if (!$token) {
@@ -96,7 +95,7 @@ class UserController extends Controller
             DB::transaction(function () use ($user, $request, $token) {
                 $user->email_verified_at = now();
                 $user->save();
-               PasswordReset::where('token', $token)->delete();
+                PasswordReset::where('token', $token)->delete();
             });
             sweetalert()->addSuccess('User is verified successfully!');
             return redirect('/');
@@ -104,11 +103,38 @@ class UserController extends Controller
             return back()->with('error', $e->getMessage());
         }
     }
-    public function registerIndex(){
+    public function registerIndex()
+    {
         return view('register_account');
     }
 
-    public function register(CreateClientRequest $request){
-        
+    public function register(CreateClientRequest $request)
+    {
+
+        try {
+            $client = DB::transaction(function () use ($request) {
+                $client = User::create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($request->password),
+                    'id_number' => $request->id_number,
+
+                ]);
+
+                $client->addMedia($request->front_image)->toMediaCollection('front_image');
+                $client->addMedia($request->back_image)->toMediaCollection('back_image');
+                $client->addMedia($request->id_in_hand)->toMediaCollection('id_in_hand');
+
+                $client->assignRole(User::CLIENT);
+
+                return $client;
+            });
+            if($client){
+                sweetalert()->addSuccess($request->name. ',your account is created successfully');
+                return back();
+            }
+        } catch (\Throwable $th) {
+            return back()->with('error', $th->getMessage());
+        }
     }
 }

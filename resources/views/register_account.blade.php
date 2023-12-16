@@ -17,7 +17,7 @@
         <div class="account-page">
             <div class="container w3-display-middle">
 
-                <form action="{{url('register-account')}}" method="post" class="form-signin">
+                <form action="{{url('register-account')}}" method="post" enctype="multipart/form-data" class="form-signin">
                     @csrf
                     <div class="account-logo">
                         <a href="{{ url('/register-account') }}"><img src="{{ url('assets/img/logo_transparent.png') }}"
