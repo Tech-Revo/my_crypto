@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\IndexController;
@@ -34,6 +35,7 @@ Route::get('/complete_registration', [UserController::class, 'emailVerified']);
 Route::get('login/forgot-password', [ForgotPasswordController::class, 'index']);
 
 Route::get('market',[MarketController::class,'index']);
+Route::get('contact-us',[ContactController::class,'publicIndex']);
 
 Route::group(
     ['middleware' => 'auth'],
