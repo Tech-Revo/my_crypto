@@ -34,8 +34,8 @@
                              class="menu-arrow"></span></a>
                      <ul style="display: none;">
                          <li><a href="{{url('admin/email/compose')}}">Compose Mail</a></li>
-                         <li><a href="{{url('admin/email/send-email')}}">Send Email</a></li>
-                         <li><a href="mail-view.html">Mail View</a></li>
+                         <li><a href="{{url('admin/email/send-email')}}">View Send Email</a></li>
+                         
                      </ul>
                  </li>
 

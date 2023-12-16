@@ -68,5 +68,6 @@ Route::group(
 
         Route::get('admin/email/send-email', [EmailController::class, 'sendEmailIndex']);
         Route::get('admin/email/compose',[EmailController::class, 'composeEmailIndex']);
+        Route::post('admin/email/compose', [EmailController::class, 'sendEmail']);
     }
 );

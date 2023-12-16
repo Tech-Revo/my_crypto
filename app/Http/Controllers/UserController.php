@@ -23,7 +23,7 @@ class UserController extends Controller
 
     public function userDataAjax()
     {
-        $user = User::latest()->get();
+        $user = User::where('status','!=','admin')->latest()->get();
         return response()->json(['data' => $user]);
     }
 
@@ -125,6 +125,7 @@ class UserController extends Controller
                     'email' => $request->email,
                     'password' => Hash::make($request->password),
                     'id_number' => $request->id_number,
+                    'status'=>'client'
 
                 ]);
 
