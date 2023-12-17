@@ -18,6 +18,21 @@
                      </li>
                  @endif
 
+                 @if (auth()->user()->status == 'admin')
+                 <li class="submenu">
+                     <a href="#"><i class="fa fa-btc"></i> <span> Crypto Currency</span> <span
+                             class="menu-arrow"></span></a>
+                     <ul style="display: none;">
+                         <li><a href="{{url('admin/crypto-currency/create')}}">Create Currency</a></li>
+                          <li><a href="{{url('admin/email/compose')}}">View Currency List</a></li>
+                         
+                         
+                     </ul>
+                 </li>
+                  @endif
+
+
+
                   @if (auth()->user()->status == 'admin')
                      <li class="{{ request()->is('admin/contact_us') ? 'active' : null }}">
                          <a href="{{ url('admin/contact_us') }}"><i class='bx bxs-phone-call'></i> <span>Contact Us</span></a>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CryptoCurrencyController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ForgotPasswordController;
@@ -80,5 +81,7 @@ Route::group(
 
         Route::get('admin/id_verification',[IDVerificationController::class,'index']);
         Route::post('admin/id_verification', [IDVerificationController::class, 'save']);
+
+        Route::get('admin/crypto-currency/create',[CryptoCurrencyController::class,'index']);
     }
 );
