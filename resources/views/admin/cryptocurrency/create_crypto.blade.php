@@ -20,30 +20,47 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
-                        <form>
+                        <form action="{{url('admin/crypto-currency/create')}}" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Crypto Name <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="text" placeholder="eg: Bitcoin">
+                                        <input class="form-control" type="text" placeholder="eg: Bitcoin" name="name">
+                                        @error('name')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Symbol<span class="text-danger">*</span></label>
-                                        <input class="form-control" type="text" placeholder="eg: BIT">
+                                        <input class="form-control" type="text" placeholder="eg: BTC" name="symbol">
+                                         @error('symbol')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Price<span class="text-danger">*</span></label>
-                                        <input class="form-control" type="text" placeholder="eg: 100000">
+                                        <input class="form-control" type="text" placeholder="eg: 100000" name="price">
+                                         @error('price')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Market Capital<span class="text-danger">*</span></label>
-                                        <input class="form-control" type="text" placeholder="eg: 100000">
+                                        <input class="form-control" type="text" placeholder="eg: 100000" name="market_capital">
+                                         @error('market_capital')
+                                        <span class="text-danger">{{$message}}</span>
+                                            
+                                        @enderror
                                     </div>
                                 </div>
 

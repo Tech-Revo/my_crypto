@@ -19,23 +19,26 @@
                  @endif
 
                  @if (auth()->user()->status == 'admin')
-                 <li class="submenu">
-                     <a href="#"><i class="fa fa-btc"></i> <span> Crypto Currency</span> <span
-                             class="menu-arrow"></span></a>
-                     <ul style="display: none;">
-                         <li><a href="{{url('admin/crypto-currency/create')}}">Create Currency</a></li>
-                          <li><a href="{{url('admin/email/compose')}}">View Currency List</a></li>
-                         
-                         
-                     </ul>
-                 </li>
-                  @endif
+                     <li class="submenu {{ request()->is('admin/crypto-currency*') ? 'active' : null }}">
+                         <a href="#"><i class="fa fa-btc"></i> <span> Crypto Currency</span> <span
+                                 class="menu-arrow"></span></a>
+                         <ul style="display: none;">
+                             <li class="{{ request()->is('admin/crypto-currency/create') ? 'active' : null }}"><a
+                                     href="{{ url('admin/crypto-currency/create') }}">Create Currency</a></li>
+                             <li class="{{ request()->is('admin/crypto-currency/view') ? 'active' : null }}"><a
+                                     href="{{ url('admin/crypto-currency/view') }}">View Currency List</a></li>
+
+
+                         </ul>
+                     </li>
+                 @endif
 
 
 
-                  @if (auth()->user()->status == 'admin')
+                 @if (auth()->user()->status == 'admin')
                      <li class="{{ request()->is('admin/contact_us') ? 'active' : null }}">
-                         <a href="{{ url('admin/contact_us') }}"><i class='bx bxs-phone-call'></i> <span>Contact Us</span></a>
+                         <a href="{{ url('admin/contact_us') }}"><i class='bx bxs-phone-call'></i> <span>Contact
+                                 Us</span></a>
                      </li>
                  @endif
 
@@ -45,18 +48,18 @@
                              class="badge badge-pill bg-primary float-right">5</span></a>
                  </li>
 
-                  @if (auth()->user()->status == 'admin')
-                 <li class="submenu">
-                     <a href="#"><i class="fa fa-envelope"></i> <span> Email</span> <span
-                             class="menu-arrow"></span></a>
-                     <ul style="display: none;">
-                         <li><a href="{{url('admin/email/compose')}}">Compose Mail</a></li>
-                         <li><a href="{{url('admin/email/send-email')}}">View Send Email</a></li>
-                         <li><a href="{{url('admin/email/trash')}}">View Trash</a></li>
-                         
-                     </ul>
-                 </li>
-                  @endif
+                 @if (auth()->user()->status == 'admin')
+                     <li class="submenu">
+                         <a href="#"><i class="fa fa-envelope"></i> <span> Email</span> <span
+                                 class="menu-arrow"></span></a>
+                         <ul style="display: none;">
+                             <li><a href="{{ url('admin/email/compose') }}">Compose Mail</a></li>
+                             <li><a href="{{ url('admin/email/send-email') }}">View Send Email</a></li>
+                             <li><a href="{{ url('admin/email/trash') }}">View Trash</a></li>
+
+                         </ul>
+                     </li>
+                 @endif
 
                  @if (auth()->user()->status == 'admin')
                      <li class="{{ request()->is('admin/settings*') ? 'active' : null }}">
