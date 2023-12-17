@@ -86,8 +86,8 @@
                             <ul class="clearfix">
                                 <li class="active"><a href="{{ url('/') }}">Home</a></li>
                                 <li class="active"><a href="{{ url('market') }}">Market</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li>
+                                {{-- <li><a href="#">Services</a></li> --}}
+                                {{-- <li>
                                     <a href="#">Pages</a>
                                     <ul>
                                         <li><a href="#">- Team</a></li>
@@ -95,14 +95,14 @@
                                         <li><a href="#">- Overview</a></li>
 
                                     </ul>
-                                </li>
-                                <li>
+                                </li> --}}
+                                {{-- <li>
                                     <a href="#">Blog</a>
                                     <ul>
                                         <li><a href="#">- Blog list</a></li>
 
                                     </ul>
-                                </li>
+                                </li> --}}
                                 <li><a href="{{url('contact-us')}}">Contact</a></li>
 
                                 <li><a href="{{ url('/login') }}"
