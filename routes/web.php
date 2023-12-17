@@ -14,6 +14,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MarketController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RechargeController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\UserController;
@@ -101,6 +102,8 @@ Route::group(
 
 
         Route::get('admin/mybalance',[ClientBalanceController::class,'index']);
+        Route::get('admin/quick-recharge',[RechargeController::class,'index']);
+        Route::post('admin/quick-recharge', [RechargeController::class, 'save']);
 
 
         

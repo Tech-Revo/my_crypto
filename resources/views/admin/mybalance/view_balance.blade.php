@@ -39,8 +39,8 @@
                                                 <small class="text-light">User Type:
                                                     {{ auth()->user()->status }}</small>
                                                 <div class="staff-id text-light">View Transactions</div>
-                                                <div class="staff-msg"><a href="{{ url('admin/chat') }}"
-                                                        class="btn btn-primary">Send Message</a></div>
+                                                <div class="staff-msg"><a href="{{ url('admin/quick-recharge') }}"
+                                                        class="btn btn-primary">Quick Recharge</a></div>
                                             </div>
                                         </div>
 
