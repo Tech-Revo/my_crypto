@@ -9,10 +9,11 @@
 
                  @if (auth()->user()->status == 'admin')
                      <li class="submenu {{ request()->is('admin/users*') ? 'active' : null }}">
-                         <a href="#"><i class="fa fa-user"></i> <span> Users </span> <span
+                         <a href="#"><i class="fa fa-user"></i> <span> Clients </span> <span
                                  class="menu-arrow"></span></a>
                          <ul style="display: none;">
                              <li><a href="{{ url('admin/users') }}">Client List</a></li>
+                             <li><a href="{{ url('admin/users/view-recharge-pending') }}">Recharge Pending</a></li>
 
                          </ul>
                      </li>
@@ -42,10 +43,11 @@
                      </li>
                  @endif
 
-
-                 <li class="{{ request()->is('admin/mybalance') ? 'active' : null }}">
-                     <a href="{{ url('admin/mybalance') }}"><i class="fa fa-btc"></i> <span>My Balance</span> </a>
-                 </li>
+                 @if (auth()->user()->status == 'client')
+                     <li class="{{ request()->is('admin/mybalance') ? 'active' : null }}">
+                         <a href="{{ url('admin/mybalance') }}"><i class="fa fa-btc"></i> <span>My Balance</span> </a>
+                     </li>
+                 @endif
 
                  <li class="submenu">
                      <a href="#"><i class='bx bxl-bitcoin'></i> <span> Trading Market</span> <span
