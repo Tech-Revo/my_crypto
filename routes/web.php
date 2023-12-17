@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\ClientBalanceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CryptoCurrencyController;
 use App\Http\Controllers\DashboardController;
@@ -89,5 +90,8 @@ Route::group(
         Route::get('admin/crypto-currency/edit/{id}', [CryptoCurrencyController::class, 'viewCryptoData']);
         Route::post('admin/crypto-currency/update/', [CryptoCurrencyController::class, 'update']);
         Route::post('admin/crypto-currency/create', [CryptoCurrencyController::class, 'save']);
+
+
+        Route::get('admin/mybalance',[ClientBalanceController::class,'index']);
     }
 );

@@ -1669,7 +1669,7 @@ ul.chat-user-total li i.old-users {
 	height: 120px;
 	position: absolute;
 	width: 120px;
-	background: #fff;
+	background-color: transparent;
 	overflow: hidden;
 }
 .profile-basic {

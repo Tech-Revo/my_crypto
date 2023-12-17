@@ -43,6 +43,10 @@
                  @endif
 
 
+                 <li class="{{ request()->is('admin/mybalance') ? 'active' : null }}">
+                     <a href="{{ url('admin/mybalance') }}"><i class="fa fa-btc"></i> <span>My Balance</span> </a>
+                 </li>
+
                  <li>
                      <a href="{{ url('admin/chat') }}"><i class="fa fa-comments"></i> <span>Chat</span> <span
                              class="badge badge-pill bg-primary float-right">5</span></a>
