@@ -29,7 +29,13 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="profile-info-left mx-5">
-                                                <h3 class="user-name m-t-0 mb-0 text-light">Coin Me Balance: 24,000</h3>
+                                                <h3 class="user-name m-t-0 mb-0 text-light">Coin Me Balance:
+                                                    @if ($clientBalance)
+                                                        {{ $clientBalance->balance }}
+                                                    @else
+                                                        0.00 
+                                                    @endif
+                                                </h3>
                                                 <small class="text-light">User Type:
                                                     {{ auth()->user()->status }}</small>
                                                 <div class="staff-id text-light">View Transactions</div>
@@ -92,7 +98,7 @@
                                                     </div>
                                                     <div class="experience-content">
                                                         <div class="timeline-content">
-                                                           <a href="#/" class="name">Load 12,000 USD</a>
+                                                            <a href="#/" class="name">Load 12,000 USD</a>
                                                             <div>Deposit</div>
                                                             <span class="time">2023-12-17</span>
                                                         </div>
