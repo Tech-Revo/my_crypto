@@ -67,4 +67,31 @@ class CryptoCurrencyController extends Controller
         }
         
     }
+
+    public function update(Request $request){
+        $crypto = CryptoCurrency::find($request->id);
+        if(!$crypto){
+            sweetalert()->addWarning('Crypto ID Not Found!');
+            return back();
+        }
+        try {
+            $crypto = DB::transaction(function () use ($request,$crypto) {
+                $crypto->update([
+                    'name' => $request->name,
+                    'symbol' => $request->symbol,
+                    'price' => $request->price,
+                    'market_capital' => $request->market_capital
+
+                ]);
+                return $crypto;
+            });
+            if ($crypto) {
+                sweetalert()->addSuccess($request->name . ' currency data updated successfully!');
+                return back();
+            }
+        } catch (\Throwable $th) {
+            return back()->with('error', $th->getMessage());
+        }
+        
+    }
 }

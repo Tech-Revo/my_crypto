@@ -87,6 +87,7 @@ Route::group(
         Route::get('admin/crypto-currency/data', [CryptoCurrencyController::class, 'cryptoData']);
         Route::get('admin/crypto-currency/delete/{id}', [CryptoCurrencyController::class, 'deleteCrypto']);
         Route::get('admin/crypto-currency/edit/{id}', [CryptoCurrencyController::class, 'viewCryptoData']);
+        Route::post('admin/crypto-currency/update/', [CryptoCurrencyController::class, 'update']);
         Route::post('admin/crypto-currency/create', [CryptoCurrencyController::class, 'save']);
     }
 );
