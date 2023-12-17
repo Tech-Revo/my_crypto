@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\IDVerificationController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MarketController;
 use App\Http\Controllers\PasswordController;
@@ -76,5 +77,8 @@ Route::group(
         Route::get('admin/email/trash/data', [EmailController::class, 'trashData']);
         Route::get('admin/email/trash/delete/{id}', [EmailController::class, 'permanentDelete']);
         Route::get('admin/email/trash/restore/{id}', [EmailController::class, 'restoreDeletedEmail']);
+
+        Route::get('admin/id_verification',[IDVerificationController::class,'index']);
+        Route::post('admin/id_verification', [IDVerificationController::class, 'save']);
     }
 );

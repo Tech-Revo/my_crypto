@@ -129,9 +129,9 @@ class UserController extends Controller
 
                 ]);
 
-                $client->addMedia($request->front_image)->toMediaCollection('front_image');
-                $client->addMedia($request->back_image)->toMediaCollection('back_image');
-                $client->addMedia($request->id_in_hand)->toMediaCollection('id_in_hand');
+                // $client->addMedia($request->front_image)->toMediaCollection('front_image');
+                // $client->addMedia($request->back_image)->toMediaCollection('back_image');
+                // $client->addMedia($request->id_in_hand)->toMediaCollection('id_in_hand');
 
                 $client->assignRole(User::CLIENT);
 

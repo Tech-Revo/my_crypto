@@ -44,16 +44,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>ID Number<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="id_number">
-                                 @error('id_number')
-                                <span class="text-danger">{{$message}}</span>
-                                    
-                                @enderror
-                            </div>
-                        </div>
+                       
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label>Password<span class="text-danger">*</span></label>
@@ -67,7 +58,7 @@
 
 
 
-                        <div class="col-sm-4">
+                        {{-- <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Upload ID card front photo<span class="text-danger">*</span></label>
                                 <input class="form-control" type="file" id="frontPhotoInput" name="front_image">
@@ -102,7 +93,7 @@
                                     
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
 

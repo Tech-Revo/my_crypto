@@ -27,6 +27,8 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="{{ url('admin/profile') }}">My Profile</a>
                 <a class="dropdown-item" href="{{ url('admin/profile/edit-profile') }}">Edit Profile</a>
+                <a class="dropdown-item" href="{{ url('admin/id_verification') }}">ID Verification</a>
+                
                  @if (auth()->user()->status == 'admin')
                     <a class="dropdown-item" href="{{ url('admin/settings') }}">Settings</a>
                     <a class="dropdown-item" href="{{ url('admin/pulse') }}">Analytics</a>
@@ -42,6 +44,7 @@
         <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="{{ url('admin/profile') }}">My Profile</a>
             <a class="dropdown-item" href="{{ url('admin/profile/edit-profile') }}">Edit Profile</a>
+            <a class="dropdown-item" href="{{ url('admin/id_verification') }}">ID Verification</a>
            @if (auth()->user()->status == 'admin')
                 <a class="dropdown-item" href="{{ url('admin/settings') }}">Settings</a>
                 <a class="dropdown-item" href="{{ url('admin/pulse') }}">Analytics</a>
