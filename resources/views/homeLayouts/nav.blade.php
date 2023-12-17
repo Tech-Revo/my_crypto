@@ -86,7 +86,7 @@
                             <ul class="clearfix">
                                 <li class="active"><a href="{{ url('/') }}">Home</a></li>
                                 <li class="active"><a href="{{ url('market') }}">Market</a></li>
-                                {{-- <li><a href="#">Services</a></li> --}}
+                               
                                 {{-- <li>
                                     <a href="#">Pages</a>
                                     <ul>
@@ -104,6 +104,7 @@
                                     </ul>
                                 </li> --}}
                                 <li><a href="{{url('contact-us')}}">Contact</a></li>
+                                 <li><a href="{{url('about-us')}}">About Us</a></li>
 
                                 <li><a href="{{ url('/login') }}"
                                         class="btn-danger text-light px-2 justify-content-end">login</a></li>

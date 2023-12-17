@@ -47,6 +47,24 @@
                      <a href="{{ url('admin/mybalance') }}"><i class="fa fa-btc"></i> <span>My Balance</span> </a>
                  </li>
 
+                 <li class="submenu">
+                     <a href="#"><i class='bx bxl-bitcoin'></i> <span> Trading Market</span> <span
+                             class="menu-arrow"></span></a>
+                     <ul style="display: none;">
+                         <li><a href="{{ url('admin/email/compose') }}">Compose Mail</a></li>
+                         <li><a href="{{ url('admin/email/send-email') }}">View Send Email</a></li>
+                         <li><a href="{{ url('admin/email/trash') }}">View Trash</a></li>
+
+                     </ul>
+                 </li>
+                 @if (auth()->user()->status == 'client')
+                     <li>
+                         <a href="#"><i class='bx bx-transfer-alt'></i> <span>Transaction
+                                 Log</span></a>
+                     </li>
+                 @endif
+
+
                  <li>
                      <a href="{{ url('admin/chat') }}"><i class="fa fa-comments"></i> <span>Chat</span> <span
                              class="badge badge-pill bg-primary float-right">5</span></a>

@@ -47,6 +47,17 @@
 
                     </div>
 
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">About Us Settings</h4>
+                                <p class="card-text">Ensure your app's "About Us" is updated.</p>
+                                <a href="{{url('admin/settings/about_us')}}" class="card-link">Update</a>
+                            </div>
+                        </div>
+
+                    </div>
+
 
                 </div>
 

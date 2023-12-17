@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ClientBalanceController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\MarketController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +43,8 @@ Route::get('login/forgot-password', [ForgotPasswordController::class, 'index']);
 Route::get('market',[MarketController::class,'index']);
 Route::get('contact-us',[ContactController::class,'publicIndex']);
 
+Route::get('about-us', [AboutController::class, 'publicIndex']);
+
 Route::group(
     ['middleware' => 'auth'],
     function () {
@@ -59,6 +63,10 @@ Route::group(
             Route::get('/', [SettingController::class, 'index']);
             Route::get('/app-settings', [SettingController::class, 'appSettingIndex']);
             Route::get('/change-password', [PasswordController::class, 'index']);
+            Route::get('/about_us', [AboutController::class, 'viewAboutUsEdit']);
+
+            Route::get('/admin/settings', [SiteSettingController::class, 'index']);
+            Route::post('post', [SiteSettingController::class, 'store']);
         });
 
         Route::get('admin/profile', [ProfileController::class, 'index']);
@@ -93,5 +101,11 @@ Route::group(
 
 
         Route::get('admin/mybalance',[ClientBalanceController::class,'index']);
+
+
+        
+
+        
+        
     }
 );

@@ -1,10 +1,11 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Http\Requests\SiteSetting;
 
+use App\Models\SiteSetting;
 use Illuminate\Foundation\Http\FormRequest;
 
-class {{ class }} extends FormRequest
+class CreateSiteSettingRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,8 +22,14 @@ class {{ class }} extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
-        ];
+        return
+            $data = [
+                "settingable_type" => ["nullable"],
+                "settingable_id" => ["nullable"]
+            ];
+        foreach (SiteSetting::$keys as $key => $type) {
+            $data[$key] = ["nullable", $type == "image" ? "image" : ""];
+        }
+        return $data;
     }
 }
