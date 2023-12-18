@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('client_id')->nullable();
             $table->foreignId('currency_id')->nullable();
             $table->string('wallet_address')->nullable();
-            $table->decimal('balance', 18, 8)->nullable();
+            $table->decimal('balance', 18, 5)->nullable();
             $table->timestamps();
         });
     }

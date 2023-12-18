@@ -106,6 +106,7 @@ Route::group(
         Route::post('admin/quick-recharge', [RechargeController::class, 'save']);
         Route::get('admin/users/view-recharge-pending', [RechargeController::class, 'viewRechargePending']);
         Route::get('admin/users/view-recharge-pending/data', [RechargeController::class, 'rechargePendingData']);
+        Route::get('admin/users/load-balance/{id}', [ClientBalanceController::class, 'loadClientBalanceIndex']);
 
 
         

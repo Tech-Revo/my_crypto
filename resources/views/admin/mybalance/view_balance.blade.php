@@ -33,7 +33,7 @@
                                                     @if ($clientBalance)
                                                         {{ $clientBalance->balance }}
                                                     @else
-                                                        0.00 
+                                                        0.00000 
                                                     @endif
                                                 </h3>
                                                 <small class="text-light">User Type:

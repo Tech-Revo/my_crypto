@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\User\CreateClientRequest;
 use App\Http\Requests\User\CreateUserRequest;
 use App\Mail\UserVerificationMail;
+use App\Models\ClientBalance;
 use App\Models\PasswordReset;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -128,6 +129,12 @@ class UserController extends Controller
                     'mobile_no'=>$request->mobile_no,
                     'status'=>'client'
 
+                ]);
+
+                ClientBalance::create([
+                    'client_id'=>$client->id,
+                    'balance'=>0
+                    
                 ]);
 
                 // $client->addMedia($request->front_image)->toMediaCollection('front_image');

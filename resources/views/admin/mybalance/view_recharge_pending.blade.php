@@ -78,8 +78,8 @@
                     {
                         data: null,
                         render: function(data, type, row) {
-                            return '<button class="btn btn-danger btn-sm" onclick="deleteAccess(' +
-                                row.id + ')">Load Money</button>';
+                            return '<button class="btn btn-danger btn-sm" onclick="viewUser(' +
+                                row.client_id + ')">Load Money</button>';
                         }
                     }
 
@@ -136,6 +136,16 @@
             }
         }
     </script>
+
+     <script>
+    function viewUser(client_id) {
+        var baseUrl = '{{ url("admin/users/load-balance") }}';
+        var url = baseUrl + '/' + client_id;
+
+        // Redirect to the constructed URL
+        window.location.href = url;
+    }
+</script>
 
 
     <div class="sidebar-overlay" data-reff=""></div>
