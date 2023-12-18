@@ -83,7 +83,28 @@
 
 
                         <div class="col-md-4">
-                            hy
+                            <h4 class="text-center">Recent Top Up</h4>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Client Name</th>
+                                        <th>Top Up Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($rechargeHistory as $data)
+                                    <td>{{$data->name}}</td>
+                                    <td>{{$data->recharge_amount}}</td>
+                                         <tr>
+                                    @empty
+                                    <td>No Recent Top Up Data</td>
+                                        
+                                    @endforelse
+                                   
+
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
 
 
