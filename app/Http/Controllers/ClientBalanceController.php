@@ -35,6 +35,9 @@ class ClientBalanceController extends Controller
         
         return view('admin.mybalance.load_coin',compact('clientBalance','client', 'rechargeRequest', 'rechargeHistory'));
     }
+
+
+    
     public function loadClientBalance(CreateLoadMoneyRequest $request){
 
         $clientID=$request->client_id;
@@ -67,5 +70,17 @@ class ClientBalanceController extends Controller
 
         
         
+    }
+
+    public function clientBalanceView(){
+        return view('admin.mybalance.view_client_balance');
+    }
+
+    public function clientBalanceData()
+    {
+        $clientBalance = ClientBalance::join('users','users.id','=', 'client_balances.client_id')
+        ->select('users.id','users.name', 'client_balances.balance')->latest('client_balances.created_at','desc')->get();
+
+        return response()->json(['data'=>$clientBalance]);
     }
 }
