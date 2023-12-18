@@ -15,50 +15,58 @@
 <body>
     <div class="main-wrapper account-wrapper">
         <div class="account-page">
-            <div class="container w3-display-middle">
+           
+                <div class="account-center">
+				<div class="account-box">
 
-                <form action="{{url('register-account')}}" method="post" enctype="multipart/form-data" class="form-signin">
+                <form action="{{ url('register-account') }}" method="post" enctype="multipart/form-data"
+                    class="form-signin">
                     @csrf
                     <div class="account-logo">
                         <a href="{{ url('/register-account') }}"><img src="{{ url('assets/img/logo_transparent.png') }}"
                                 alt="Coin Me Logo"></a>
                     </div><br>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>Name<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="name">
-                                @error('name')
-                                <span class="text-danger">{{$message}}</span>
-                                    
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>Email<span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="email">
-                                 @error('name')
-                                <span class="text-danger">{{$message}}</span>
-                                    
-                                @enderror
-                            </div>
-                        </div>
-                       
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label>Password<span class="text-danger">*</span></label>
-                                <input class="form-control" type="password" name="password">
-                                 @error('password')
-                                <span class="text-danger">{{$message}}</span>
-                                    
-                                @enderror
-                            </div>
-                        </div>
+
+
+                    <div class="form-group">
+                        <label>Name<span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" name="name">
+                        @error('name')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Email<span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" name="email">
+                        @error('name')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile No<span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" name="mobile_no">
+                        @error('mobile_no')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
 
 
 
-                        {{-- <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Password<span class="text-danger">*</span></label>
+                        <input class="form-control" type="password" name="password">
+                        @error('password')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+
+
+
+                    {{-- <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Upload ID card front photo<span class="text-danger">*</span></label>
                                 <input class="form-control" type="file" id="frontPhotoInput" name="front_image">
@@ -94,7 +102,7 @@
                                 @enderror
                             </div>
                         </div> --}}
-                    </div>
+
 
 
 
@@ -111,8 +119,9 @@
                         Already have an account? <a href="{{ url('/login') }}">Login</a>
                     </div>
                 </form>
+            </div></div>
 
-            </div>
+           
         </div>
     </div>
     <script src="{{ url('assets/js/jquery-3.2.1.min.js') }}"></script>

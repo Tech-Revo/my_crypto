@@ -124,7 +124,8 @@ class UserController extends Controller
                     'name' => $request->name,
                     'email' => $request->email,
                     'password' => Hash::make($request->password),
-                    'id_number' => $request->id_number,
+                    // 'id_number' => $request->id_number,
+                    'mobile_no'=>$request->mobile_no,
                     'status'=>'client'
 
                 ]);

@@ -25,6 +25,7 @@ class CreateClientRequest extends FormRequest
         return [
             'name'=>['required'],
             'email'=>['required',Rule::unique('users','email')],
+            'mobile_no'=>['required'],
             'password'=>['required'],
            
             
