@@ -23,13 +23,13 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>App Name <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="text" value="">
+                                        <input class="form-control" type="text" value="Coin Me">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Owner</label>
-                                        <input class="form-control " value="Daniel Porter" type="text">
+                                        <input class="form-control " value="Rehan Dhakal" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input class="form-control" value="danielporter@example.com" type="email">
+                                        <input class="form-control" value="rehan@example.com" type="email">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
