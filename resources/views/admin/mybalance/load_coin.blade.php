@@ -23,11 +23,23 @@
                     <div class="row">
 
                         <div class="col-md-8">
-                            <form>
+                            <form action="{{url('admin/users/load-balance')}}" method="post">
+                                @csrf
+                                 <input class="form-control" name="client_id" type="hidden" value="{{$client->id}}"
+                                       readonly>
+                                <input class="form-control" name="recharge_id" type="hidden" value="{{$rechargeRequest->id??null}}"
+                                       readonly>
+
 
                                 <div class="form-group">
                                     <label>Client Name</label>
                                     <input class="form-control" type="text" value="{{$client->name}}"
+                                       readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Amount Requested</label>
+                                    <input class="form-control" type="text" value="{{$rechargeRequest->recharge_amount}}"
                                        readonly>
                                 </div>
 
@@ -40,6 +52,10 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+
+                                <div class="m-t-20 text-center">
+                                <button type="submit" class="btn btn-primary submit-btn">Load Amount</button>
+                            </div>
                             </form>
 
                             <div class="container mt-5">

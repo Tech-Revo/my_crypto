@@ -23,7 +23,7 @@ class RechargeController extends Controller
     {
         $rechargePending = Recharge::join('users', 'users.id', '=', 'recharges.client_id')
             ->select('users.id as client_id', 'users.name', 'recharges.recharge_amount',
-             'recharges.payment_address')->latest('recharges.created_at', 'desc')->get();
+             'recharges.payment_address')->where('recharges.recharge_status','not_done')->latest('recharges.created_at', 'desc')->get();
 
         return response()->json(['data' => $rechargePending]);
     }
